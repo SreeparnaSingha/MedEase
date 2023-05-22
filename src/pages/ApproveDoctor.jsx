@@ -34,7 +34,7 @@ const ApproveDoctor = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = {
-      status,
+      selectedOption,
       doctorID,
     };
     try {
@@ -63,6 +63,13 @@ const ApproveDoctor = () => {
       notifyFailure();
     }
   };
+
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
   return (
     <div className="min-h-[80vh] w-full flex flex-col justify-center items-center py-12 sm:px-6 lg:px-8">
       <div className="z-20 w-1/2">
@@ -108,17 +115,16 @@ const ApproveDoctor = () => {
                 >
                   Status
                 </label>
-                <div className="mt-1">
-                  <input
-                    id="status"
-                    name="status"
-                    type="text"
-                    required
-                    value={status}
-                    onChange={(e) => setStatus(e.target.value)}
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                  />
-                </div>
+                <select
+                  id="status"
+                  value={selectedOption}
+                  onChange={handleOptionChange}
+                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                >
+                  <option value="">Select an option</option>
+                  <option value="approved">Approved</option>
+                  <option value="pending">Pending</option>
+                </select>
               </div>
 
               <div>

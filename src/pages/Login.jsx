@@ -172,14 +172,7 @@ const Login = () => {
               </div>
             </form>
 
-            <div className="font-spacemono">
-              <span className="text-md mr-3 text-gray-500 font-bold">
-                Don't have an account?
-              </span>
-              <button className="text-lg underline">
-                <NavLink to="/register">Register here</NavLink>
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>

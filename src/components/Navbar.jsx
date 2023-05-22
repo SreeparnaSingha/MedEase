@@ -59,7 +59,7 @@ const Navbar = () => {
     <>
       <nav className="fixed z-50 w-full bg-blue-200 text-white px-6 py-6 flex items-center border-b-2 border-b-white">
         <div className="flex justify-between w-full">
-          <NavLink to="/" className="mr-8 hover:text-gray-300 flex">
+          <NavLink to="/" className="mr-8 hover:text-blue-800 flex">
             <img src={MedEase2} alt="MedEase" className="w-12 h-12 mr-4 mt-2" />
             <span className="text-3xl font-bold font-handdrawn pt-3">
               MedEase
@@ -71,7 +71,7 @@ const Navbar = () => {
               <>
                 <li className="pt-6">
                   <button className="flex flex-row">
-                    <span className="hover:text-gray-300 text-lg font-medium flex items-center mr-2">
+                    <span className="hover:text-blue-800 text-lg font-medium flex items-center mr-2">
                       <FaUserAlt className="mr-2" />
                       ADMIN
                     </span>
@@ -99,16 +99,7 @@ const Navbar = () => {
                     <FaSignInAlt className="ml-2" />
                   </NavLink>
                 </li>
-                <li className="pt-6 border-b-2 border-transparent hover:border-gray-300">
-                  <NavLink
-                    exact="true"
-                    to="/register"
-                    className="hover:text-gray-300 text-lg font-medium flex items-center"
-                  >
-                    <span className="text-indigo-500 font-bold">REGISTER</span>
-                    <FaUserPlus className="ml-2" />
-                  </NavLink>
-                </li>
+                
               </>
             )}
           </ul>
